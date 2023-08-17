@@ -1,0 +1,95 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.Content {
+  background-image: url("../../public/imgs/harrypotter.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 2000px;
+  position: relative;
+}
+.Content::after {
+  content: "";
+  width: 100vw;
+  height: 2000px;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.Content .screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.Content .screen svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 15px;
+}
+.Content .screen .shape-fill {
+  fill: #252d37;
+}
+
+.Seat {
+  border: 0.5px solid #252d37;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.Seat:hover {
+  border-color: #252d37;
+  background-color: #252d37;
+  color: #ebeef3;
+}
+.Seat.Selected {
+  border: #959da6;
+  background-color: #959da6;
+  color: #ebeef3;
+}
+.Seat.Reserved {
+  border: #d4b7a0;
+  background-color: #d4b7a0;
+  color: #f4e8d6;
+  pointer-events: none;
+}
+.Seat.disable {
+  border: none;
+  pointer-events: none;
+  font-weight: 500;
+}
+
+.btnBook {
+  transition: all 0.3s ease;
+}
+.btnBook:hover {
+  box-shadow: 0 0 30px 1px rgb(253, 224, 71);
+  padding: 20px 40px;
+  font-size: 18px;
+  border: transparent;
+}
+
+.Result thead.maxChoose {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.Result tbody.maxChoose {
+  display: block;
+  max-height: 576px;
+  overflow: auto;
+}
+.Result tbody.maxChoose tr {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

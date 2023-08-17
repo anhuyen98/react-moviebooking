@@ -1,0 +1,110 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.Content {
+    background-image: url('../../public/imgs/harrypotter.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 2000px;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100vw;
+        height: 2000px;
+        background-color: black;
+        opacity: .5;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .screen svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 15px;
+    }
+
+    .screen .shape-fill {
+        fill: #252d37;
+    }
+
+}
+
+
+.Seat {
+    border: .5px solid #252d37;
+    border-radius: 5px;
+    transition: all .3s ease;
+    cursor: pointer;
+
+    &:hover {
+        border-color: #252d37;
+        background-color: #252d37;
+        color: #ebeef3;
+    }
+
+    &.Selected {
+        border: #959da6;
+        background-color: #959da6;
+        color: #ebeef3;
+    }
+
+    &.Reserved {
+        border: #d4b7a0;
+        background-color: #d4b7a0;
+        color: #f4e8d6;
+        pointer-events: none;
+    }
+
+    &.disable {
+        border: none;
+        pointer-events: none;
+        font-weight: 500;
+    }
+}
+
+.btnBook {
+    transition: all .3s ease;
+
+    &:hover {
+        box-shadow: 0 0 30px 1px rgb(253 224 71);
+        padding: 20px 40px;
+        font-size: 18px;
+        border: transparent;
+    }
+}
+
+.Result {
+    thead.maxChoose {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    tbody.maxChoose {
+        display: block;
+        max-height: 576px;
+        overflow: auto;
+
+        tr {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+    }
+}
